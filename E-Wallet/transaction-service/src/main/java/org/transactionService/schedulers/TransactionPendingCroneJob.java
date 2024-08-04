@@ -35,6 +35,7 @@ public class TransactionPendingCroneJob {
         List<Transaction> transactionList=transactionService.getPendingTransactions();
         for(int i=0;i<transactionList.size();i++)
         {
+            log.info("For Every Transaction of Status PENDING marked as FAILED");
             transactionList.get(i).setTransactionStatus(TransactionStatus.FAILED);
             transactionService.saveTransaction(transactionList.get(i));
             GetUserResponse senderUserDetails=feignUserService.getUserByPhone(transactionList.get(i).getSenderId());
