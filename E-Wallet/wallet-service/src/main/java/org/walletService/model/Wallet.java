@@ -10,10 +10,11 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.util.Date;
 
 /**
- * This class is used as a model for Wallet API.
+ * This class is used as a ml for Wallet API.
  *
  * @author rpranay665@gmail.com
  */
+//Testing
 @Entity
 @Getter
 @Setter
